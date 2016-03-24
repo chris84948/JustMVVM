@@ -43,7 +43,7 @@ That's it, super simple!
         Deck.Shuffle();
     }
 
-or with using RelayCommand<T>
+or with using RelayCommand &lt;T&gt;
 
 	<Button Command="{Binding ShuffleDeckCommand}"
 			CommandParameter={Binding Deck}/>
