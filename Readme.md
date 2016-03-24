@@ -42,6 +42,23 @@ That's it, super simple!
     {
         Deck.Shuffle();
     }
+
+or with using RelayCommand<T>
+
+	<Button Command="{Binding ShuffleDeckCommand}"
+			CommandParameter={Binding Deck}/>
+
+	public ICommand ShuffleDeckCommand { get { return new RelayCommand<Deck>(ShuffleDeckExec, CanShuffleDeckExec); } }
+
+	private bool CanShuffleDeckExec(Deck deck)
+    {
+        return deck != null && _isGameComplete;
+    }
+
+    private void ShuffleDeckExec(Deck deck)
+    {
+        deck.Shuffle();
+    }
 	
 
 That's it. Hope you like it!
