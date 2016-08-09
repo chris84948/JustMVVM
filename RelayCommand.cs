@@ -10,14 +10,8 @@ namespace JustMVVM
     /// </summary>
     public class RelayCommand<T> : ICommand
     {
-        private Action showFlyoutExec;
         readonly Predicate<T> _canExecute;
         readonly Action<T> _execute;
-
-        public RelayCommand(Action showFlyoutExec)
-        {
-            this.showFlyoutExec = showFlyoutExec;
-        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RelayCommand"/> class and the command can always be executed.
