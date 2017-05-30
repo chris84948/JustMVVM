@@ -1,4 +1,4 @@
-###JustMVVM
+### JustMVVM
 
 JustMVVM is *the* simplest ever MVVM framework. Unlike Prism, MVVMLight or Caliburn.Micro, JustMVVM just does 2 things. There's an implementation for INotifyPropertyChanged and for ICommand.
 
