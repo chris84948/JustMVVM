@@ -51,6 +51,19 @@ namespace JustMVVM
         }
 
         /// <summary>
+        /// Updates the property backing field and calls notifypropertychanged on the VM
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="propField"></param>
+        /// <param name="newValue"></param>
+        /// <param name="propertyName"></param>
+        protected void SetProperty<T>(ref T propField, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            propField = newValue;
+            OnPropertyChanged(propertyName);
+        }
+
+        /// <summary>
         /// Warns the developer if this Object does not have a public property with
         /// the specified name.
         /// </summary>
