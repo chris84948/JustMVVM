@@ -6,7 +6,7 @@ JustMVVM came about because I felt like the bigger frameworks had a little too m
 
 **MVVMBase** is the base class implementing the INotifyPropertyChanged interface. It can be used like this -
 
-	Public class Card : MVVMBase
+	Public class Card : MVVMBase 
 	{
 		private eSuit _suit;
 		public eSuit Suit
